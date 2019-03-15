@@ -13,5 +13,6 @@ in pkgs.stdenv.mkDerivation {
     inherit (easy-ps.inputs)
       purs
       spago;
+    erlang = pkgs.erlang;
   };
 }
