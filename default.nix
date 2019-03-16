@@ -3,16 +3,15 @@ let
   easy-ps = import (pkgs.fetchFromGitHub {
     owner = "boxyoman";
     repo = "easy-purescript-nix";
-    rev = "c9ac929b6d59e846486644f1439c56b9c692896d";
-    sha256 = "17v39ra0gf3qys83wi2sk5rgfj7vkicsvza97zp9v18yc4cs6baa";
+    rev = "6bdccdcba26504d3ba2bf1f878a75056291b37bf";
+    sha256 = "1kypfb2kp6gl2bg1zgj7mkmwqzgf130mmzvr8smlxwn8w3bhwz0h";
   });
 
 in pkgs.stdenv.mkDerivation {
   name = "purerl-test";
-  buildInputs = builtins.attrValues {
-    inherit (easy-ps.inputs)
-      purs
-      spago;
-    erlang = pkgs.erlang;
-  };
+  buildInputs = [
+    easy-ps.inputs.purs
+    easy-ps.inputs.spago
+    pkgs.erlang
+  ];
 }
