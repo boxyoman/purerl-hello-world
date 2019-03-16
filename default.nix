@@ -3,8 +3,8 @@ let
   easy-ps = import (pkgs.fetchFromGitHub {
     owner = "boxyoman";
     repo = "easy-purescript-nix";
-    rev = "6bdccdcba26504d3ba2bf1f878a75056291b37bf";
-    sha256 = "1kypfb2kp6gl2bg1zgj7mkmwqzgf130mmzvr8smlxwn8w3bhwz0h";
+    rev = "277cf5ca7dc07616b8d74225c11f88d22a7f816f";
+    sha256 = "14jxabqzfh1d4ja4bnxc1zqpjcjm155rvgnn83ckb0047r4n9a7b";
   });
 
 in pkgs.stdenv.mkDerivation {
